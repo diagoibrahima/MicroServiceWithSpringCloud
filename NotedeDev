@@ -1,5 +1,12 @@
-Cette dependence permet d'exluse tomcat et utilise netty comm server d'application 
-netty permet de faire les appel non bloquant
+Tout au long de l'implémentation nous avons rencontré quelques difficultés :
+
+1. la compatibilité entres les version de spring et les dependences 
+
+
+2.Cette dependence utiliser dans le gateway permet d'exluse tomcat et utilise netty comm server d'application 
+netty permet de faire les appel non bloquant ce qui est different avec tomcat
+
+netty est utilisé avec webflux qui gerer les appel non bloquant
 <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -10,9 +17,6 @@ netty permet de faire les appel non bloquant
 				</exclusion>
 			</exclusions>
 </dependency>
-		
-		
-		
 		
 		
 cette dependence permet d'exclure le module web
