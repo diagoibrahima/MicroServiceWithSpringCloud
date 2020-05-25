@@ -22,7 +22,7 @@ Création de la partie backend d’un exemple d’application basée sur des mic
 
 
 
-SCENARIO : 
+###Scénario: 
 
 Au démarrage, les services customer, inventory, billing et meme le geteway s'enregistre aupres de eureka service. 
 Il renseigne a ce server registry leur nom, leurs adresse IP et leur port.
@@ -52,8 +52,54 @@ une chaîne de filtres spécifique à la demande. Les filtres peuvent exécuter 
 Toute la logique de filtrage «pré» est exécutée ensuite, la demande de procuration est effectuée. 
 Une fois la demande de proxy effectuée, la logique de filtrage «post» est exécutée.
 
+
+###Démarage et test des  services
+
+1.	EUREKA-SERVICE
+	Ouvrez le projet avec votre editeur et demarrer le. Si tout marche correctement, tester l'url suivant 
+	- http://localhost:8761/
+	
+2.	CUSTOMER-SERVICE
+	Meme chose ouvrez le projet sur votre éditeur exemple inteliji et demarrer le service
+	tester l'url suivant pour s'assurer du bon fonctionnement du service 
+	http://localhost:8081/customers
+	
+3.	INVENTORY-SERVICE
+	ouvrez le projet sur inteliji et demarer le service puis tetster l'url suivant
+	http://localhost:8082/products/
+	
+4.	BILLING-SERVICE
+	Ouvrez le projet sur inteliji et demarer le service puis tester l'url suivant sur votre navigateur
+	http://localhost:8083/fullBill/1
+	
+	fullBill est une projection que nous avons creer dans les codes pour afficher les infos du customer et des deatils du product
+	
+5.	GATEWAY
+	Meme chose pour le projet gateway. Ouvrez le sur inteliji et demarrer le service puis tester l'url
+	http://localhost:8888/INVENTORY-SERVICE/products
+	http://localhost:8888/CUSTOMER-SERVICE/customers
+	http://localhost:8888/BILLING-SERVICE/fullBill/1
+	
+6.	HYSTRIX-DASHBOARD
+	ouvrez le projet sur inteliji et demarrer le service puis tester l'url suivant 
+	http://localhost:9999/hystrix/
+	
+7.	RAPID-API
+	Dans le projet nous avons aussi intégrer des API externe comme countries et MuslimSalat tester en faisant quelques modifications
+	au niveau de la configuration du service gateway au niveau de la configutation statique des filters des routes.
+	au niveau des entetes changer la valeur de rapidapi key et metez votre propre clé apres inscription sur le site de rapidapi.
+	
+	http://localhost:8888/publicCountries/region/africa
+	
+	
+
+
 Mot clés : Java, JEE, Spring, Spring Cloud, Micro services, Spring Cloud Gateway, Eureka Discovery service, Hystrix, Circuit Breaker
 
 Documentation 
 
 Spring Cloud Gateway : https://cloud.spring.io/spring-cloud-gateway/reference/html/
+
+Video explicative du travail : https://www.youtube.com/watch?v=rIYK0C0ES94&t=2129s
+
+En cas de besoin contacter nous : http://mmdiago.com/
