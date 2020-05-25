@@ -1,6 +1,8 @@
 # MicroServiceWithSpringCloud
 Création de la partie backend d’un exemple d’application basée sur des micro-service en utilisant Spring cloud
 
+![](ArchitectureGlobale.JPG)
+
 1. Création des micros-service métiers en mode express basés sur JPA, Spring Data, Spring Data Rest, H2 Data base, Open Feign
     - Customer Service
     - Inventory Service
