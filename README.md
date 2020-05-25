@@ -8,13 +8,14 @@ Création de la partie backend d’un exemple d’application basée sur des mic
     - Inventory Service
     - Billing Service
 	
-2. Comment Développer et Mettre en place le Discovery Service Netflix Eureka Service
+2. Développement et mise en place du Discovery Service Netflix Eureka Service
 
-3. Comment développer un service proxy orchestration avec Spring Cloud Gateway avec les trois modes de routage :
+3. Développement d'un service proxy orchestration avec Spring Cloud Gateway avec les trois modes de routage :
     - Routage Statique avec Configuration déclarative application.yml
     - Routage statique avec Configuration programmatique (Classe de configuration)
     - Routage Dynamique en s’appuyant sur le service d’enregistrement Eureka Discovery. 
-4. Comment utiliser les services de spring cloud 
+	
+4. Utilisation des services de spring cloud 
 	- Actuator pour le monitoring et le management des services
 	- Hystrix pour Circuit Breaker 
 	- Hystrix Dash Board
